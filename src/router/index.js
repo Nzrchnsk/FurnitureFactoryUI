@@ -23,7 +23,23 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: Modules
-  }
+  },
+  {
+    path: '/sign_in',
+    name: 'signIn',
+    component: () => import('../views/auth/signIn'),
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: () => import('../views/auth/register'),
+  },
+  {
+    path: '/users',
+    name: 'users',
+    component: () => import('../views/users/usersList'),
+    props: true,
+  },
 ]
 
 const router = createRouter({

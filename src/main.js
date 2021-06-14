@@ -7,12 +7,17 @@ import { VueAxios } from 'vue-axios'
 
 
 import 'jquery/src/jquery.js'
-// import 'vue-popperjs/dist/vue-popper.css';
-// import 'vue-popperjs/dist/vue-popper.js';
 
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+
+axios.interceptors.request.use(function (config) {
+    config.headers.common = {
+        'Authorization': `Bearer ${localStorage.getItem('userAuth')}`,
+    };
+    return config;
+});
 
 createApp(App).use(store).use(VueAxios, axios).use(router).mount('#app')
