@@ -1,7 +1,7 @@
 <script>
 import axios from 'axios';
 
-let link = 'https://localhost:5001/'
+let link = 'https://localhost:5001/api/'
 
 async function Get(api, params) {
   let linkFull = link + api;
