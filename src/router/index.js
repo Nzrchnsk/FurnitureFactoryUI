@@ -66,6 +66,12 @@ const routes = [
     component: () => import('../views/orders/orderChange'),
     props: true,
   },
+  {
+    path: '/orders/buy/:orderId',
+    name: 'buyOrder',
+    component: () => import('../views/orders/buyOrder'),
+    props: true,
+  },
 ]
 
 const router = createRouter({

@@ -62,6 +62,9 @@
                     console.log(e)
                 }
             },
+            buyOrder(id) {
+                this.$router.push({name: 'buyOrder', params: {orderId: id}});
+            },
             async getOrders() {
                 try {
                     let {data} = await Api.Get('orders');
