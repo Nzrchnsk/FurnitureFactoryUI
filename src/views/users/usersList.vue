@@ -1,20 +1,20 @@
 <template>
     <div class="card">
-        <div class="card-header">Списко пользователей</div>
+        <div class="card-header">Пользователи</div>
         <div class="card-body">
             <table class="table">
                 <thead>
                 <tr>
+                    <th scope="col">Е-mail</th>
                     <th scope="col">Имя</th>
-                    <th scope="col">E-mail</th>
                     <th scope="col">Роль</th>
                     <th scope="col">Действия</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr  v-for="item in users">
-                    <td>{{item.userName}}</td>
                     <td>{{item.email}}</td>
+                    <td>{{item.userName}}</td>
                     <td>{{item.role}}</td>
                     <td>
                         <button type="button" @click="deleteUser(item.id)" class="btn btn-danger btn-sm">

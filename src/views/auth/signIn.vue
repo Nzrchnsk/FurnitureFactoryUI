@@ -2,7 +2,7 @@
     <div class="text-center">
         <main class="form-signin" style="width: 30%; margin: 0 auto">
             <form>
-                <img class="mb-4" src="../../assets/main-logo.png" alt="" width="72" height="57">
+                <img class="mb-4" src="../../assets/logo.jpg" alt="" width="72" height="57">
                 <h1 class="h3 mb-3 fw-normal">Пожалуйста авторизируйтесь</h1>
 
                 <div class="form-floating">

@@ -2,13 +2,12 @@
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-                <img src="../../assets/main-logo.png" width="60" height="60">
+                <img src="../../assets/logo.jpg" width="60" height="60">
             </a>
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+                <li><a v-if="userAuth" href="/modules" class="nav-link px-2 link-dark">Модули</a></li>
+                <li><a v-if="userAuth" href="/orders" class="nav-link px-2 link-dark">Заказы</a></li>
                 <li><a v-if="userAuth && isAdmin" href="/user_directory" class="nav-link px-2 link-dark">Список пользователей</a></li>
             </ul>
 

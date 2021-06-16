@@ -17,14 +17,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/modules',
-    name: 'Modules',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: Modules
-  },
-  {
     path: '/sign_in',
     name: 'signIn',
     component: () => import('../views/auth/signIn'),
@@ -38,6 +30,40 @@ const routes = [
     path: '/users',
     name: 'users',
     component: () => import('../views/users/usersList'),
+    props: true,
+  },
+  {
+    path: '/modules',
+    name: 'modulesDirectory',
+    component: () => import('../views/modules/modulesDirectory'),
+  },
+  {
+    path: '/modules/:moduleId',
+    name: 'moduleEdit',
+    component: () => import('../views/modules/moduleChange'),
+    props: true,
+  },
+  {
+    path: '/modules/create',
+    name: 'moduleCreate',
+    component: () => import('../views/modules/moduleChange'),
+    props: true,
+  },
+  {
+    path: '/modules/show/:moduleId',
+    name: 'moduleShow',
+    component: () => import('../views/modules/moduleShow'),
+    props: true,
+  },
+  {
+    path: '/orders',
+    name: 'ordersDirectory',
+    component: () => import('../views/orders/ordersDirectory'),
+  },
+  {
+    path: '/orders/create',
+    name: 'orderCreate',
+    component: () => import('../views/orders/orderChange'),
     props: true,
   },
 ]
