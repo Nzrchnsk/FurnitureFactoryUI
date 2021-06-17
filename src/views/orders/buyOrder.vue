@@ -26,6 +26,10 @@
                         </div>
                         <hr>
                         <div class="row lower">
+                            <div class="col text-left">Скидка</div>
+                            <div class="col text-right">{{order ? order.sale : ''}} руб.</div>
+                        </div>
+                        <div class="row lower">
                             <div class="col text-left">Стоимость</div>
                             <div class="col text-right">{{order ? order.totalPrice : ''}} руб.</div>
                         </div>

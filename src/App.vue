@@ -17,9 +17,9 @@
       headerComponent,
     },
     mounted() {
-      // if (!localStorage.getItem('userAuth')) {
-      //   this.$router.push({name: 'signIn'});
-      // }
+      if (!localStorage.getItem('userAuth')) {
+        this.$router.push({name: 'signIn'});
+      }
     }
   }
 </script>

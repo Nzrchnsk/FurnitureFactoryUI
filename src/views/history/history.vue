@@ -11,7 +11,6 @@
                     <th scope="col">Скидка</th>
                     <th scope="col">Модули</th>
                     <th scope="col">Статус заказа</th>
-                    <th scope="col">Действия</th>
                 </tr>
                 </thead>
                 <tbody>
