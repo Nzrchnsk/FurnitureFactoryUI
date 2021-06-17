@@ -20,9 +20,9 @@
                     <td>{{item.id}}</td>
                     <td>{{item.totalPrice}}</td>
                     <td>{{item.user.userName}}</td>
-                    <td><label v-for="module in item.sales.module">{{module.name}}</label></td>
+                    <td><p v-for="module in item.sales">{{module.module.name}}</p></td>
                     <td>
-                        <button v-if="!item.isSale" type="button" @click="buyOrder(item.id)" class="btn btn-danger btn-sm">
+                        <button v-if="!item.isSale" type="button" @click="buyOrder(item.id)" class="btn btn-success my-2 btn-sm">
                             Купить
                         </button>
                         <button type="button" @click="deleteOrder(item.id)" class="btn btn-danger btn-sm">

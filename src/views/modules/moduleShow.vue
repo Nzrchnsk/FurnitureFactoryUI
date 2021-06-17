@@ -8,7 +8,7 @@
             <label type="text" class="form-control mb-2">{{data.name}}</label>
             <label type="text" class="form-control mb-2">{{data.description}}</label>
             <label type="text" class="form-control mb-2">{{data.price}}</label>
-            <img :src="data.photo" class="img-circle form-control mb-2" />
+            <img :src="data.photo" style=" max-width: 250px" class="img-circle form-control mb-2" />
         </div>
     </div>
 </template>

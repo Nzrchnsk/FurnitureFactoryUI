@@ -72,6 +72,12 @@ const routes = [
     component: () => import('../views/orders/buyOrder'),
     props: true,
   },
+  {
+    path: '/history',
+    name: 'historyList',
+    component: () => import('../views/history/history'),
+    props: true,
+  },
 ]
 
 const router = createRouter({

@@ -8,7 +8,8 @@
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><a v-if="userAuth" href="/modules" class="nav-link px-2 link-dark">Модули</a></li>
                 <li><a v-if="userAuth" href="/orders" class="nav-link px-2 link-dark">Заказы</a></li>
-                <li><a v-if="userAuth && isAdmin" href="/user_directory" class="nav-link px-2 link-dark">Список пользователей</a></li>
+                <li><a v-if="userAuth" href="/history" class="nav-link px-2 link-dark">История</a></li>
+                <li><a v-if="userAuth && isAdmin" href="/users" class="nav-link px-2 link-dark">Список пользователей</a></li>
             </ul>
 
             <div class="col-md-3 text-end">

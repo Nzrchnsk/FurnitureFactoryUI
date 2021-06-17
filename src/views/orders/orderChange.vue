@@ -40,14 +40,14 @@
           Api
         },
         methods: {
-            save() {
+            async save() {
                 this.invalidValidation = false;
                 if (!this.selectedModules || !this.selectedModules.length > 0) {
                     this.invalidValidation = true;
                     return
                 }
                 try {
-                    Api.Post('orders', this.selectedModules);
+                    await Api.Post('orders', this.selectedModules);
                     this.$router.push({name: 'ordersDirectory'});
                 } catch (e) {
                     console.log(e)
